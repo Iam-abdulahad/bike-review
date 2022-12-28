@@ -1,11 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useReviews from '../../hooks/useReviews';
 import Images from '../Images/ktm.jpg';
 import Review from '../Review/Review';
-import Reviews from '../reviews/Reviews';
 
 const Home = () => {
        const [reviews, setReviews] = useReviews();
+       const navigate = useNavigate();
        return (
               <div class="container mx-auto">
                      <div className='grid grid-cols-2 flex justify-between'>
@@ -19,10 +20,10 @@ const Home = () => {
                                    <a class="text-zinc-50 bg-sky-500 rounded-full px-8 my-8 py-4 mt-6" target="_blank" href="https://www.linkedin.com/in/iam-abdulahad/"> HIRE ME </a>
                             </div>
                             <div className='mt-6 py-6 px-5'>
-                                   <img 
-                                   className='border rounded-lg'
-                                   style={{height: "500px"}}
-                                    src={Images} alt="" />
+                                   <img
+                                          className='border rounded-lg'
+                                          style={{ height: "500px" }}
+                                          src={Images} alt="" />
                             </div>
                      </div>
 
@@ -40,11 +41,13 @@ const Home = () => {
                                    }
                             </div>
                      </div>
-                     
-                     <button 
-                            className=' flex justify-center text-zinc-50 bg-sky-500 rounded-full px-8 my-8 py-4 mt-6'
-                            onClick={<Reviews></Reviews>}
+
+                     <div className=' flex justify-center'>
+                            <button
+                                   className=' flex justify-center text-zinc-50 bg-sky-500 rounded-full px-8 my-8 py-4 mt-6'
+                                   onClick={() => navigate("/reviews")}
                             >See All Reviews</button>
+                     </div>
               </div>
 
        );

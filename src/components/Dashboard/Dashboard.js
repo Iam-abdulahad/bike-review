@@ -21,6 +21,7 @@ const Dashboard = () => {
                                    <XAxis dataKey="month" />
                                    <YAxis></YAxis>
                                    <Tooltip></Tooltip>
+                                   <Legend></Legend>
                             </LineChart>
                      </div>
                      <div className='py-8 px-8'>
@@ -32,7 +33,7 @@ const Dashboard = () => {
                                    <Legend />
                                    <Bar dataKey="sell" fill="#8884d8" />
                                    <Bar dataKey="revenue" fill="#82ca9d" />
-                                   <Bar dataKey="investment" fill="#82ca9d" />
+                                   <Bar dataKey="investment" fill="#FF0000" />
                             </BarChart>
                      </div>
               </div >

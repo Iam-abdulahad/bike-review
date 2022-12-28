@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
        return (
-              <div>
-                     <nav className='text-4xl py-8 bg-zinc-200'>
+              <div className='bg-zinc-200 py-8'>
+                     <nav className='container mx-auto text-4xl flex items-center '>
                             <Link to='/' className='mx-8'>HOME</Link>
                             <Link to='/reviews' className='mx-8'>REVIEWS</Link>
                             <Link to='/dashboard' className='mx-8'>DASHBOARD</Link>
