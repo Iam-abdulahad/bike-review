@@ -1,7 +1,8 @@
 import React from 'react';
 import useReviews from '../../hooks/useReviews';
 import Images from '../Images/ktm.jpg';
-import Review from '../Review/Review'
+import Review from '../Review/Review';
+import Reviews from '../reviews/Reviews';
 
 const Home = () => {
        const [reviews, setReviews] = useReviews();
@@ -17,8 +18,11 @@ const Home = () => {
                                    </h4>
                                    <a class="text-zinc-50 bg-sky-500 rounded-full px-8 my-8 py-4 mt-6" target="_blank" href="https://www.linkedin.com/in/iam-abdulahad/"> HIRE ME </a>
                             </div>
-                            <div>
-                                   <img className='border rounded-lg' src={Images} alt="" />
+                            <div className='mt-6 py-6 px-5'>
+                                   <img 
+                                   className='border rounded-lg'
+                                   style={{height: "500px"}}
+                                    src={Images} alt="" />
                             </div>
                      </div>
 
@@ -36,6 +40,11 @@ const Home = () => {
                                    }
                             </div>
                      </div>
+                     
+                     <button 
+                            className=' flex justify-center text-zinc-50 bg-sky-500 rounded-full px-8 my-8 py-4 mt-6'
+                            onClick={<Reviews></Reviews>}
+                            >See All Reviews</button>
               </div>
 
        );
